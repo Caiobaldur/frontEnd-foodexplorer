@@ -16,7 +16,7 @@ export function Login() {
         <input placeholder="No mínimo 6 caracteres" type="text" id="password"/>
       </Form>
 
-    <Button/>
+    <Button title="Entrar"/>
       </div>
     </Container>
   );

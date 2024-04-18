@@ -2,18 +2,17 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   color: white;
-
   @media (max-width: 500px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 15.8rem;
+    margin-top: 8rem;
     .logo{
       margin-bottom: 7.3rem;
     }
 
-    .signup-button{
+    .login-button{
       font-family: ${({ theme }) => theme.FONTS.Primary};
       font-size: 1.4rem;
       margin-top: 3.2rem;

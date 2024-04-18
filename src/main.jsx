@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyles from './styles/global.js'
 import theme from './styles/theme.js'
 
-import {Login} from './pages/App/index.jsx'
+import {Login} from './pages/Login/Login.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

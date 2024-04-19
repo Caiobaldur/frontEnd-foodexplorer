@@ -2,21 +2,21 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Duas colunas, cada uma com 1 fração de espaço */
+  grid-template-columns: 1fr 1fr; 
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Defina a altura do contêiner para ocupar a altura total da tela */
-  margin-top: auto; /* Centralize verticalmente ao definir a margem superior como automática */
+  height: 100vh; 
+  margin-top: auto; 
 
   .logo {
-    grid-column: 1; /* Coloque a logo na primeira coluna */
-    justify-self: center; /* Centralize horizontalmente */
+    grid-column: 1; 
+    justify-self: center;
     margin-bottom: 7.3rem;
   }
 
   .signup-button {
-    grid-column: 2; /* Coloque o botão de inscrição na segunda coluna */
-    justify-self: center; /* Centralize horizontalmente */
+    grid-column: 2; 
+    justify-self: center;
     font-family: ${({ theme }) => theme.FONTS.Primary};
     font-size: 1.4rem;
     margin-top: 3.2rem;
@@ -35,7 +35,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: auto; /* Altura automática para dispositivos móveis */
+    height: auto; 
     margin-top: 10rem;
 
     .logo {
@@ -57,9 +57,8 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-  grid-column: 2; /* Coloque o formulário na segunda coluna */
-  justify-self: center; /* Centralize horizontalmente */
-
+  grid-column: 2; 
+  justify-self: center; 
   font-family: ${({ theme }) => theme.FONTS.Secondary};
   font-size: 1.6rem;
   display: flex;

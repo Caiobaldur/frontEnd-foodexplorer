@@ -81,6 +81,10 @@ export const Form = styled.form`
     margin-bottom: 3.2rem;
   }
 
+  & button {
+    padding: 0 12.3rem;
+  }
+
   @media (max-width: 500px) {
     font-family: ${({ theme }) => theme.FONTS.Secondary};
     font-size: 1.6rem;

@@ -7,7 +7,6 @@ export function ButtonDish(){
     <Container type="button">
       <PiReceipt/>
       <p>Pedidos <span className="count">(0)</span></p>
-
     </Container>
   );
 }

@@ -5,7 +5,7 @@ export const Container = styled.div`
   color: ${({ theme }) => theme.COLORS.LIGHT_200};
   padding: 2.4rem 12.3rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_600};
-  position: fixed;
+  position: static;
   bottom: 0;
 
   .footer {

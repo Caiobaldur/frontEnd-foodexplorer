@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 30.4rem;
   height: 46.2rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_200};
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -56,7 +56,7 @@ export const Container = styled.div`
   .order_varyButtons {
     display: flex;
     align-items: center;
-    gap: 1.4rem;
+    gap: 1rem;
   }
 
   .quantity {
@@ -131,8 +131,7 @@ export const FavButton = styled.button`
 
 export const RemoveButton = styled.button`
   > svg {
-    width: 2.4rem;
-    height: 2.4rem;
+    font-size: 3rem;
     color: #fff;
   }
 
@@ -140,8 +139,7 @@ export const RemoveButton = styled.button`
 
 export const AddButton = styled.button`
 > svg {
-    width: 2.4rem;
-    height: 2.4rem;
+  font-size: 3rem;
     color: #fff;
   }
 

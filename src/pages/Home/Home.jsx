@@ -12,7 +12,9 @@ export function Home() {
     <Container>
        <Header/>
        <FeatureCard/>
-       <EmblaCarousel/>
+       <EmblaCarousel title="Refeições"/>
+       <EmblaCarousel title="Sobremesas"/>
+       <EmblaCarousel title="Bebidas"/>
        <Footer/>
     </Container>
   );

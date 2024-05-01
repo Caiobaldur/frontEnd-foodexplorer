@@ -5,7 +5,7 @@ import { DishCard } from "../DishCard";
 import { Container } from "./styles";
 
 export function EmblaCarousel(props) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
   useEffect(() => {
     if (emblaApi) {

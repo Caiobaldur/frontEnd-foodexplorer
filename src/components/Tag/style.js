@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.span`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: .4rem .8rem;
   border-radius: .5rem;
   margin-right: 1.2rem;

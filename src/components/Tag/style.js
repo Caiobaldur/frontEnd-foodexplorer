@@ -10,6 +10,7 @@ export const Container = styled.span`
   background-color: ${({ theme }) => theme.COLORS.DARK_1000};
 
   @media (max-width: 500px) {
+    transform: translateX(10px);
     margin-right: 2.4rem;
     margin-bottom: 2.8rem;
   }

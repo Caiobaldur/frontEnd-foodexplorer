@@ -8,4 +8,9 @@ export const Container = styled.span`
   font-family: ${({theme}) => theme.FONTS.Primary};
   color: ${({ theme }) => theme.COLORS.LIGHT_100};
   background-color: ${({ theme }) => theme.COLORS.DARK_1000};
+
+  @media (max-width: 500px) {
+    margin-right: 2.4rem;
+    margin-bottom: 2.8rem;
+  }
 `;

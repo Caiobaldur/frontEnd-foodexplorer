@@ -67,42 +67,40 @@ export const Section = styled.section`
     justify-content: center;
     align-items: center;
     gap: 1.6rem;
-    
+
     .left__content {
-
       gap: 2.6rem;
-    
-    > img {
 
+      > img {
         width: 26.4rem;
         height: 26.4rem;
       }
     }
 
     .dish__description {
-    justify-content: center;
-    align-items: center;
+      justify-content: center;
+      align-items: center;
 
-    gap: 2.4rem;
-    h1 {
-      font-size: 2.7rem;
-      font-weight: 500;
+      gap: 2.4rem;
+      h1 {
+        font-size: 2.7rem;
+        font-weight: 500;
+      }
+
+      p {
+        width: 31.6rem;
+        font-size: 1.6rem;
+        text-align: center;
+      }
     }
 
-    p {
-      width: 31.6rem;
-      font-size: 1.6rem;
-      text-align: center;
+    .dish__ingredients {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 31.6rem;
     }
   }
-  
-  .dish__ingredients{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 31.6rem;
-  }
-}
 
   .wrap-order {
     padding-top: 2rem;

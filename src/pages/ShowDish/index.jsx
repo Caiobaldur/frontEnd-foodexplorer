@@ -21,10 +21,9 @@ export function ShowDish() {
         <div className="dish__description">
           <h1>Salada Ravanello</h1>
           <p>
-            Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O
-            pão naan dá um toque especial.
+            Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.
           </p>
-          <div className="dish__ingedients">
+          <div className="dish__ingredients">
             <Tag title="cebola" />
             <Tag title="alface" />
             <Tag title="tomate" />

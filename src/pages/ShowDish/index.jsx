@@ -25,13 +25,13 @@ export function ShowDish() {
             pão naan dá um toque especial.
           </p>
           <div className="dish__ingedients">
-            <Tag title="Cebola" />
-            <Tag title="Alface" />
-            <Tag title="Tomate" />
-            <Tag title="Azeite" />
-            <Tag title="Queijo" />
-            <Tag title="Pepino" />
-            <Tag title="Cebola Roxa" />
+            <Tag title="cebola" />
+            <Tag title="alface" />
+            <Tag title="tomate" />
+            <Tag title="azeite" />
+            <Tag title="queijo" />
+            <Tag title="pepino" />
+            <Tag title="cebola roxa" />
           </div>
           <div className="wrap-order">
             <div className="order_varyButtons">

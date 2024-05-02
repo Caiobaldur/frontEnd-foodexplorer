@@ -56,6 +56,7 @@ export const Section = styled.section`
 
   .wrap_button {
     & button {
+      font-size: 1.4rem;
       padding: 0 2.4rem;
     }
   }
@@ -103,7 +104,7 @@ export const Section = styled.section`
   }
 
   .wrap-order {
-    padding-top: 2rem;
+    padding-top: 2.8rem;
     display: flex;
     align-items: center;
     gap: 1.6rem;
@@ -124,7 +125,7 @@ export const Section = styled.section`
 
   .wrap_button {
     & button {
-      font-size: 1rem;
+      
       padding: 0 2.4rem;
     }
   }

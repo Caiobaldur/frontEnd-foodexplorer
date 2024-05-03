@@ -5,7 +5,6 @@ export const Container = styled.div`
   width: 30.4rem;
   height: 46.2rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_200};
-  /* border: 1px solid red; */
   position: relative;
   display: flex;
   justify-content: center;

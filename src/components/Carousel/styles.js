@@ -18,7 +18,6 @@ export const Container = styled.div`
     display: flex;
     width: 100%;
     gap: 2.7rem;
-    border: 1px red solid;
   }
   .embla__slide {
   display: flex;

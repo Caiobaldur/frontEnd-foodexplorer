@@ -1,86 +1,86 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 112.0rem;
-  margin: 0 auto;
-  margin-top: 16.4rem;
-  position: relative;
-  height: fit-content;
-  max-height: 26rem;
-
-  display: flex;
-  justify-content: space-between;
-  box-shadow: inset 75px 3px 0px 0px ${({ theme }) => theme.COLORS.DARK_400};
-
-  border-radius: .3rem;
-  align-items: center;
-
-  background: ${({ theme }) => theme.GRADIENTS.BACKGROUND_200};
-
-  .image {
-    width: 126rem;
-    transform: translateY(-16%);
-    overflow: hidden;
-    height: 38rem;
-    
+  padding: 0 12.4rem;
+  .content__card {
+    margin-top: 16.4rem;
+    margin-bottom: 6.2rem;
+    position: relative;
+    height: fit-content;
+    max-height: 26rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    border-radius: 0.3rem;
+    background: ${({ theme }) => theme.GRADIENTS.BACKGROUND_200};
   }
 
-  img {
-    transform: scaleX(-1);
+  .image {
+    transform: translateY(-18%) translateX(-10%);
+    overflow: hidden;
+    height: 40.5rem;
+
+    img {
+      width: 126rem;
+      height: 80rem;
+      transform: scaleX(-1);
+    }
   }
 
   .text {
+    padding: 18rem 1rem 20rem 0rem;
     width: 100%;
     text-align: left;
-  }
-
-  h1 {
-    font-size: 4rem;
-    font-weight: 500;
-  }
-
-  p {
-    
-    font-size: 1.4rem;
-    font-weight: 400;
-  }
-
-
-  @media (max-width: 500px) {
-    margin-top: 5.4rem;
-    max-height: 12rem;
-    box-shadow: inset 19px 0px 0px 0px ${({ theme }) => theme.COLORS.DARK_400};
-    max-width: 39rem;
-    height: fit-content;
-    position: relative;
-    transform: translateX(-10px);
-
-    .text {
-    width: 100%;
-    text-align: left;
-    transform: translateY(10px);
-  }
-    
-    .image {
-      width: 29.1rem;
-      transform: translateY(-3%);
-      overflow: hidden;
-      height: 12.9rem;
-    }
 
     h1 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    line-height: 2.52rem;
-    margin-bottom: .5rem;
+      font-size: 4rem;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
   }
 
-  p {
-    font-size: 1.3rem;
-    font-weight: 400;
-    line-height: 1.8rem;
-    font-family: ${({ theme }) => theme.FONTS.Secondary};
-  }
-  }
+  @media (max-width: 500px) {
+    padding: 2rem 1.6rem 0rem 1.6rem;
 
+    .content__card {
+      display: flex;
+      box-shadow: inset 8px 0px 0px 0px ${({ theme }) => theme.COLORS.DARK_400};
+      margin-top: 5.4rem;
+      max-height: 13rem;
+      height: fit-content;
+      position: relative;
+    }
+
+    .image {
+      transform: translateY(-10.5%) translateX(-8.5%);
+      overflow: hidden;
+      height: 16.5rem;
+
+      img {
+        width: 38rem;
+        height: 28rem;
+      }
+    }
+
+    .text {
+      padding: 1rem 0rem 0rem 0rem;
+      text-align: left;
+      transform: translateY(-1%) translateX(-13%);
+      h1 {
+        font-size: 1.8rem;
+        white-space: nowrap;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
 `;

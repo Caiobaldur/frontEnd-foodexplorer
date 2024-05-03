@@ -13,6 +13,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px black solid;
+    border-radius: 0.8rem;
   }
 
   > .dishDescription img {

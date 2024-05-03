@@ -76,6 +76,7 @@ export const Form = styled.form`
 
   & input {
     background-color: ${({ theme }) => theme.COLORS.DARK_900};
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
     width: 100%;
     padding: 1.6rem 1.4rem;
     border-radius: 0.8rem;

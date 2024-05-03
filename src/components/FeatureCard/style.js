@@ -44,7 +44,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 500px) {
-    padding: 2rem 1.6rem 0rem 1.6rem;
+    padding: 0rem 1.6rem 0rem 1.6rem;
 
     .content__card {
       display: flex;

@@ -8,7 +8,7 @@ import { ShowDish } from "../pages/ShowDish";
 export function AppRoutes(){
   return (
     <Routes>
-      {/* <Route path="/" element={<Home/>}/> */}
+      <Route path="/" element={<Home/>}/>
       <Route path="/dish/:id" element={<ShowDish/>}/>
     </Routes>
   )

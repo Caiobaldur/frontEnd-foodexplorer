@@ -3,9 +3,11 @@ import { PiReceiptBold } from "react-icons/pi";
 import { GoSignOut } from "react-icons/go";
 import { HiOutlineMenu } from "react-icons/hi";
 import { ButtonDish } from "../ButtonDish/ButtonDish";
+import { useAuth } from "../../hooks/auth";
 
 
 export function Header() {
+  const {signOut} = useAuth();
   return (
     <Container>
       <div className="content">
@@ -30,7 +32,7 @@ export function Header() {
         <div className="final">
           <ButtonDish/>
           <Logout>
-            <GoSignOut />
+            <GoSignOut onClick={signOut}/>
           </Logout>
         </div>
         <MobileReceipt>

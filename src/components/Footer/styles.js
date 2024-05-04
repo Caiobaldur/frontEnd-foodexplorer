@@ -9,38 +9,30 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.DARK_600};
   position: static;
   bottom: 0;
+  justify-content: space-between;
 
-  .footer {
-    justify-content: space-between;
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-    .logo {
+    > .logo_footer {
+      display: flex;
       align-items: center;
       color: ${({ theme }) => theme.COLORS.LIGHT_700};
-      display: flex;
       gap: 1rem;
       img {
         width: 3rem;
       }
-      h1 {
+    > h1 {
         font-size: 2.4rem;
         line-height: 1;
       }
     }
 
-    p {
+   > p {
       font-size: 1.4rem;
       line-height: 1;
     }
-  }
 
   @media (max-width: 500px) {
     padding: 2.9rem 2rem;
-    .footer {
-
-      .logo {
+      .logo_footer {
   
         gap: 0.6rem;
         img {
@@ -58,5 +50,5 @@ export const Container = styled.div`
         white-space: nowrap;
       }
     }
-  }
+
 `;

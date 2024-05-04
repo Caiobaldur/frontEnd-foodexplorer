@@ -72,22 +72,6 @@ export const Container = styled.header`
   }
 `;
 
-export const MenuMobile = styled.button`
-  
-  > svg {
-    color: ${({ theme }) => theme.COLORS.LIGHT_100};
-    font-size: 2.6rem;
-  }
-  
-  @media (max-width: 2560px) {
-    display: none;
-  }
-
-  @media (max-width: 500px) {
-    display: block;
-  }
-`;
-
 export const Logout = styled.button`
   > svg {
     color: ${({ theme }) => theme.COLORS.LIGHT_100};

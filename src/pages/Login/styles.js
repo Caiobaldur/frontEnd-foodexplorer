@@ -92,6 +92,10 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
 
+    button {
+      padding: 1.2rem;
+    }
+
     h1{
       display: none;
     }

@@ -69,13 +69,19 @@ export const Container = styled.div`
 
   .wrap_button {
     & button{
-      padding: 0 2.4rem;
+      padding: 1.5rem 2.4rem;
     }
   }
 //Media query
   @media (max-width: 500px) {
     width: 21rem;
     height: 29.2rem;
+
+  .wrap_button {
+    button {
+      padding: .8rem 6rem;
+    }
+    }
 
   .dishDescription img {
     width: 8.8rem;

@@ -1,20 +1,24 @@
-import { Container, Logout, MobileReceipt, MenuMobile } from "./styles";
+import { Container, Logout, MobileReceipt } from "./styles";
 import { PiReceiptBold } from "react-icons/pi";
 import { GoSignOut } from "react-icons/go";
-import { HiOutlineMenu } from "react-icons/hi";
+
 import { ButtonDish } from "../ButtonDish/ButtonDish";
 import { useAuth } from "../../hooks/auth";
-
+import { useState } from "react";
+import { Hamburguer } from "./Hamburguer";
 
 export function Header() {
-  const {signOut} = useAuth();
+  const { signOut } = useAuth();
+  const [menuOpen, setMenuOpen] = useState(false);
+  // const { setSearch, search } = useSearch()
+  // const { getCartCount } = useCart()
+
+
+
   return (
     <Container>
       <div className="content">
-        <MenuMobile>
-          <HiOutlineMenu />
-        </MenuMobile>
-
+        <Hamburguer setMenuOpen={setMenuOpen} isOpen={menuOpen}/>
         <div className="logo">
           <img src="../src/assets/Polygon.svg" alt="" />
           <h1>food explorer</h1>
@@ -30,9 +34,9 @@ export function Header() {
         </div>
 
         <div className="final">
-          <ButtonDish/>
+          <ButtonDish />
           <Logout>
-            <GoSignOut onClick={signOut}/>
+            <GoSignOut onClick={signOut} />
           </Logout>
         </div>
         <MobileReceipt>

@@ -39,9 +39,9 @@ export const Container = styled.div`
   @media (max-width: 500px) {
     padding: 2.9rem 2rem;
     .footer {
-      border: 1px red solid;
+
       .logo {
-        border: 1px red solid;
+  
         gap: 0.6rem;
         img {
           width: 2.2rem;
@@ -54,7 +54,7 @@ export const Container = styled.div`
 
       p {
         font-size: 1.1rem;
-        /* border: 1px red solid; */
+  
         white-space: nowrap;
       }
     }

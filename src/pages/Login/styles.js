@@ -83,7 +83,7 @@ export const Form = styled.form`
   }
 
   & button {
-    padding: 0 12.3rem;
+    padding: 1.2rem 12.3rem;
   }
 
   @media (max-width: 500px) {

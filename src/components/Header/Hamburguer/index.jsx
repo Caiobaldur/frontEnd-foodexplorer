@@ -5,24 +5,24 @@ import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { useAuth } from "../../../hooks/auth";
 
 export function Hamburguer({ setMenuOpen, isOpen = false }) {
-  const { signOut } = useAuth();
+  const { signOut, user } = useAuth();
 
   function handleMenuOpen(isMenuOpen) {
-    if(isMenuOpen) {
-      setMenuOpen(true)
-      activateBodyScroll(false)
+    if (isMenuOpen) {
+      setMenuOpen(true);
+      activateBodyScroll(false);
     } else {
-      setMenuOpen(false)
-      activateBodyScroll(true)
+      setMenuOpen(false);
+      activateBodyScroll(true);
     }
   }
 
-  function activateBodyScroll(active){
-    const body = document.body
-    if(active) {
-      body.style.overflow = "auto"
+  function activateBodyScroll(active) {
+    const body = document.body;
+    if (active) {
+      body.style.overflow = "auto";
     } else {
-      body.style.overflow = "hidden"
+      body.style.overflow = "hidden";
     }
   }
 
@@ -36,21 +36,28 @@ export function Hamburguer({ setMenuOpen, isOpen = false }) {
         <div className="menu">
           <div className="header__menu">
             <button onClick={() => handleMenuOpen(false)}>
-              <HiOutlineX size={24}/>
+              <HiOutlineX size={24} />
             </button>
             <span>Menu</span>
           </div>
           <div className="content__menu">
-          <label>
-            <input
-              type="search"
-              placeholder="Busque por pratos ou ingredientes"
-            />
-          </label>
-          <button onClick={() => signOut()}>
-            Sair
-          </button>
-          <div className="line"></div>
+            <label>
+              <input
+                type="search"
+                placeholder="Busque por pratos ou ingredientes"
+              />
+            </label>
+            <div className="menu__options">
+              {user.isAdmin ? (
+                <button>
+                  Novo prato <div className="line"></div>
+                </button>
+              ) : (
+                ""
+              )}
+              <button onClick={() => signOut()}>Sair</button>
+            </div>
+            <div className="line"></div>
           </div>
           <Footer />
         </div>

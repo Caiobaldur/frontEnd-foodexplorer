@@ -35,35 +35,33 @@ export const Section = styled.section`
   }
 
   .wrap-order {
+    display: flex;
+    align-items: center;
     padding-top: 2.4rem;
-    display: flex;
-    align-items: center;
     gap: 3.3rem;
-  }
+    .order_varyButtons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
 
-  .order_varyButtons {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+      & svg {
+        font-size: 2.7rem;
+      }
+      .quantity {
+        font-family: ${({ theme }) => theme.FONTS.Secondary};
+        font-size: 2.2rem;
+      }
+    }
   }
-
-  .quantity {
-    font-family: ${({ theme }) => theme.FONTS.Secondary};
-    width: 2.4rem;
-    height: 3rem;
-    font-size: 2rem;
-  }
-
   .wrap_button {
-    & button {
+    button {
       font-size: 1.4rem;
-      padding: 0 2.4rem;
+      padding: 1.2rem 2.4rem;
     }
   }
 
   @media (max-width: 500px) {
     padding: 3.6rem 5.6rem 3.3rem 5.6rem;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -108,25 +106,17 @@ export const Section = styled.section`
     display: flex;
     align-items: center;
     gap: 1.6rem;
-  }
+    .order_varyButtons {
+      transform: translateY(12%);
 
-  .order_varyButtons {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .quantity {
+      font-family: ${({ theme }) => theme.FONTS.Secondary};
 
-  .quantity {
-    font-family: ${({ theme }) => theme.FONTS.Secondary};
-    width: 2.6rem;
-    height: 3.6rem;
-    font-size: 2.2rem;
-  }
-
-  .wrap_button {
-    & button {
-      
-      padding: 0 2.4rem;
+      font-size: 2.2rem;
     }
   }
 `;

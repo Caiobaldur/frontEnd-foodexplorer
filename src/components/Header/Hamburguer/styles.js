@@ -9,7 +9,7 @@ export const Container = styled.div`
     inset: 0;
     position: absolute;
     z-index: 9999;
-    
+
     .header__menu {
       display: flex;
       align-items: center;
@@ -46,17 +46,29 @@ export const Container = styled.div`
       background-color: ${({ theme }) => theme.COLORS.DARK_900};
       color: ${({ theme }) => theme.COLORS.LIGHT_100};
       text-align: center;
-      margin-bottom: 3.6rem;
+      margin-bottom: 4.6rem;
     }
 
-    button {
-      font-family: ${({ theme }) => theme.FONTS.Primary};
-      font-weight: 400;
-      font-size: 2.4rem;
+    .menu__options {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 3rem;
+
+      button {
+        font-family: ${({ theme }) => theme.FONTS.Primary};
+        font-weight: 400;
+        font-size: 2.4rem;
+        width: 100%;
+        text-align: start;
+      }
+      
     }
+
+    
 
     .line {
-      margin-top: 1rem;
+      padding-top: 3rem;
       opacity: 0.1;
       border-bottom: 1px white solid;
     }

@@ -8,15 +8,14 @@ import { Tag } from "../../components/Tag";
 import { AddButton, RemoveButton } from "../../components/DishCard/styles";
 import { IoIosAdd, IoIosRemove } from "react-icons/io";
 
-
 export function ShowDish() {
   return (
     <Container>
       <Header />
       <Section>
         <div className="left__content">
-        <BackButton />
-        <img src={dish1} alt="" />
+          <BackButton />
+          <img src={dish1} alt="" />
         </div>
         <div className="dish__description">
           <h1>Salada Ravanello</h1>

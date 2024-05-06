@@ -14,9 +14,22 @@ export const Container = styled.header`
 
   .logo {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 1rem;
     margin-right: 1.1rem;
+    transform: translateY(0%);
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+    span {
+      font-family: ${({ theme }) => theme.FONTS.Secondary};
+      font-weight: 100;
+      font-size: 1.2rem;
+      color: ${({ theme }) => theme.COLORS.CAKE_200};
+      transform: translateY(-3px);
+    }
   }
 
   .search {
@@ -45,6 +58,18 @@ export const Container = styled.header`
     display: flex;
     align-items: center;
     gap: 3.2rem;
+
+    button:first-child {
+      width: 100%;
+      font-family: ${({ theme }) => theme.FONTS.Primary};
+      background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
+      color: ${({ theme }) => theme.COLORS.LIGHT_100};
+      border: 0;
+      padding: 1.2rem 6.8rem;
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
   }
 
   @media (max-width: 500px) {
@@ -58,7 +83,18 @@ export const Container = styled.header`
       flex-wrap: nowrap;
       align-items: center;
       justify-content: center;
-      transform: translateY(-15%);
+      gap: 0.8rem;
+
+      transform: translateY(-10%);
+      h1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      span {
+        transform: translateY(0px);
+      }
     }
 
     .search {
@@ -68,7 +104,6 @@ export const Container = styled.header`
     .final {
       display: none;
     }
-
   }
 `;
 
@@ -85,29 +120,28 @@ export const Logout = styled.button`
 `;
 
 export const MobileReceipt = styled.button`
-  
   > svg {
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
     font-size: 2.6rem;
     position: relative;
   }
-  
-  >span {
+
+  > span {
     position: absolute;
     color: white;
-    padding-top: .2rem;
-    background-color: ${({theme}) => theme.COLORS.TOMATO_100};
-    border-radius: 50%; 
+    padding-top: 0.2rem;
+    background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
+    border-radius: 50%;
     height: 2rem;
     width: 2rem;
     z-index: 1;
     margin: -0.6rem 1.3rem 2rem;
   }
-  
+
   @media (max-width: 2560px) {
     display: none;
   }
-  
+
   @media (max-width: 500px) {
     display: block;
   }

@@ -99,18 +99,29 @@ export const Container = styled.div`
       }
     }
 
+    .embla {
+    --slide-spacing: 1.6rem;
+    --slide-size: 21rem;
+  }
+
+
+
     .embla__container {
       backface-visibility: hidden;
-      display: flex;
-      width: 200%;
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1.5);
       margin-bottom: 2.5rem;
     }
 
-    .embla__container {
-      gap: 1.6rem;
+    .embla__button__svg {
+      display: none;
     }
 
-    .embla__button__svg {
+    .embla__button--prev::before {
+      display: none;
+    }
+    .embla__button--next::before {
       display: none;
     }
   }

@@ -1,61 +1,54 @@
 import React, { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons
+} from './EmblaCarouselArrowButtons'
 import Autoplay from "embla-carousel-autoplay";
 import { DishCard } from "../DishCard";
 import { Container } from "./styles";
 
 export function EmblaCarousel(props) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const { slides, options } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel([Autoplay()]);
 
-  useEffect(() => {
-    if (emblaApi) {
-    }
-  }, [emblaApi])
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick
+  } = usePrevNextButtons(emblaApi)
 
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
-  }, [emblaApi])
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
+  
 
   return (
     <Container>
-      <div className="embla">
-        <div className="embla__viewport" ref={emblaRef}>
-          <h1>{props.title}</h1>
-          <div className="embla__container">
-            <div className="embla__slide">
-              <DishCard />
+      <section className="embla">
+        <h1>{props.title}</h1>
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container">
+          {slides.map((slide, index) => (
+            <div className="embla__slide" key={index}>
+              <DishCard/>
             </div>
-            <div className="embla__slide">
-              <DishCard />
-            </div>
-            <div className="embla__slide">
-              <DishCard />
-            </div>
-            <div className="embla__slide">
-              <DishCard />
-            </div>
-            <div className="embla__slide">
-              <DishCard />
-            </div>
-            <div className="embla__slide">
-              <DishCard />
-            </div>
-          </div>
+          ))}
         </div>
 
-        <div>
-          <button className="embla__prev" onClick={scrollPrev}>
-            Prev
-          </button>
-          <button className="embla__next" onClick={scrollNext}>
-            Next
-          </button>
+        <div className="embla__controls">
+          <div className="embla__buttons">
+            <PrevButton
+              onClick={onPrevButtonClick}
+              disabled={prevBtnDisabled}
+            />
+            <NextButton
+              onClick={onNextButtonClick}
+              disabled={nextBtnDisabled}
+            />
+          </div>
         </div>
       </div>
+    </section>
     </Container>
   );
 }

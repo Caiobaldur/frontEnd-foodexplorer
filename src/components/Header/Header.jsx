@@ -1,7 +1,7 @@
 import { Container, Logout, MobileReceipt } from "./styles";
 import { PiReceiptBold } from "react-icons/pi";
 import { GoSignOut } from "react-icons/go";
-
+import { useNavigate } from "react-router-dom";
 import { ButtonDish } from "../ButtonDish/ButtonDish";
 import { useAuth } from "../../hooks/auth";
 import { useState } from "react";
@@ -12,9 +12,14 @@ import { Button } from "../Button/Button";
 export function Header() {
   const { signOut, user } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const isAdmin = () => {
     return user && user.isAdmin === USER_ROLE.ADMIN;
+  };
+
+  const handleNewDishClick = () => {
+    navigate("/dish");
   };
 
   return (
@@ -37,7 +42,7 @@ export function Header() {
         </div>
 
         <div className="final">
-          {isAdmin() ? <button>Novo Prato</button> : <ButtonDish />}
+          {isAdmin() ? <button onClick={handleNewDishClick}>Novo Prato</button> : <ButtonDish />}
           <Logout>
             <GoSignOut onClick={signOut} />
           </Logout>

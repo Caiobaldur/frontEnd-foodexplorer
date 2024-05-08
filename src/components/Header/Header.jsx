@@ -12,8 +12,11 @@ import { Button } from "../Button/Button";
 export function Header() {
   const { signOut, user } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
-  // const { setSearch, search } = useSearch()
-  // const { getCartCount } = useCart()
+
+  const isAdmin = () => {
+    return user && user.isAdmin === USER_ROLE.ADMIN;
+  };
+
   return (
     <Container>
       <div className="content">
@@ -21,13 +24,7 @@ export function Header() {
 
         <div className="logo">
           <img src="../src/assets/Polygon.svg" alt="" />
-          {[USER_ROLE.ADMIN].includes(user.isAdmin) ? (
-            <h1>
-              food explorer <span>admin</span>
-            </h1>
-          ) : (
-            <h1>food explorer</h1>
-          )}
+          <h1>food explorer {isAdmin() && <span>admin</span>}</h1>
         </div>
 
         <div className="search">
@@ -40,16 +37,13 @@ export function Header() {
         </div>
 
         <div className="final">
-          {[USER_ROLE.ADMIN].includes(user.isAdmin) ? (
-            <button>Novo Prato</button>
-          ) : (
-            <ButtonDish />
-          )}
+          {isAdmin() ? <button>Novo Prato</button> : <ButtonDish />}
           <Logout>
             <GoSignOut onClick={signOut} />
           </Logout>
         </div>
-        {[USER_ROLE.ADMIN].includes(user.isAdmin) ? (
+
+        {isAdmin() ? (
           <span></span>
         ) : (
           <MobileReceipt>

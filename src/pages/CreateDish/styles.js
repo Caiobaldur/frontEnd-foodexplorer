@@ -68,15 +68,21 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
     }
   }
-  .form_upload{
+  .form_upload {
     width: 60%;
   }
 
-  .form_name{
+  .form_name {
     width: 150%;
   }
+  .form_category {
+    > select {
+      background-color: ${({ theme }) => theme.COLORS.DARK_900};
+      border-radius: 0.8rem;
+    }
+  }
 
-  .form_tags{
+  .form_tags {
     width: 360%;
   }
 
@@ -98,7 +104,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: 3.2rem;
-    
+
     > label {
       font-family: ${({ theme }) => theme.FONTS.Secondary};
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
@@ -116,8 +122,78 @@ export const Container = styled.div`
     }
   }
 
-  .button-container{
-  align-self: flex-end;
+  .button-container {
+    align-self: flex-end;
+  }
+
+  @media (max-width: 500px) {
+    .section_one {
+      padding: 1.1rem 3.2rem 2.4rem 3.2rem;
+      > h1 {
+        content: "Novo prato";
+        padding: 2.2rem 0rem 3.6rem 0rem;
+        font-size: 3.2rem;
+        font-weight: 400;
+      }
+      > form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+      }
+    }
+    .form_upload {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      label {
+        justify-content: start;
+        padding-left: 3.2rem;
+        width: 100%;
+        img {
+          margin-right: 0.8rem;
+        }
+      }
+    }
+
+    .form_name {
+      width: 100%;
+    }
+
+    .form_category {
+      width: 100%;
+    }
+
+    .section_two {
+      padding: 1rem 3.2rem 2.4rem 3.2rem;
+      > form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+      }
+    }
+
+    .form_tags {
+      width: auto;
+    }
+
+    .form_price {
+      width: auto;
+    }
+    .section_three {
+      padding: 0rem 3.2rem 5.3rem 3.2rem;
+      > form {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+      }
+    }
+    .form_description {
+      width: auto;
+    }
+    .button-container{
+      width: 100%;
+      align-self: center;
+    }
   }
 `;
 
@@ -125,10 +201,13 @@ export const Button = styled.button`
   width: 17.2rem;
   height: 4.8rem;
   font-family: ${({ theme }) => theme.FONTS.Primary};
-  background-color: ${({theme}) => theme.COLORS.TOMATO_100};
-  color: ${({theme}) => theme.COLORS.LIGHT_100};
+  background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
+  color: ${({ theme }) => theme.COLORS.LIGHT_100};
   border: 0;
-  &:disabled{
+  &:disabled {
     opacity: 0.5;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
   }
 `;

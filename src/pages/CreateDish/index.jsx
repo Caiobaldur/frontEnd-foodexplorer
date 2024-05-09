@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BackButton } from "../../components/BackButton";
-import { Button } from "../../components/Button/Button";
+// import { Button } from "../../components/Button/Button";
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
-import { Container } from "./styles";
+import { Container, Button } from "./styles";
 
 export function CreateDish() {
   const [dishImage, setDishImage] = useState(null);
@@ -121,8 +121,10 @@ export function CreateDish() {
             onChange={(e) => setDishDescription(e.target.value)}
           ></textarea>
         </div>
+        <div className="button-container">
+          <Button type="submit">Salvar alterações</Button>
+        </div>
       </section>
-      <Button type="submit">Salvar alterações</Button>
       <Footer />
     </Container>
   );

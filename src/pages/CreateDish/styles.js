@@ -61,14 +61,24 @@ export const Container = styled.div`
     > input,
     > select {
       height: 4.8rem;
-      width: 100%;
+      width: auto;
+      flex-grow: 1;
       padding-left: 1.4rem;
       background-color: ${({ theme }) => theme.COLORS.DARK_800};
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
     }
   }
+  .form_upload{
+    width: 60%;
+  }
 
+  .form_name{
+    width: 150%;
+  }
 
+  .form_tags{
+    width: 360%;
+  }
 
   .section_two {
     padding: 0rem 12.3rem 3.2rem 12.3rem;
@@ -80,10 +90,15 @@ export const Container = styled.div`
 
   .section_three {
     padding: 0rem 12.3rem 19.6rem 12.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .form_description {
     display: flex;
     flex-direction: column;
+    margin-bottom: 3.2rem;
+    
     > label {
       font-family: ${({ theme }) => theme.FONTS.Secondary};
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
@@ -99,5 +114,21 @@ export const Container = styled.div`
       background-color: ${({ theme }) => theme.COLORS.DARK_800};
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
     }
+  }
+
+  .button-container{
+  align-self: flex-end;
+  }
+`;
+
+export const Button = styled.button`
+  width: 17.2rem;
+  height: 4.8rem;
+  font-family: ${({ theme }) => theme.FONTS.Primary};
+  background-color: ${({theme}) => theme.COLORS.TOMATO_100};
+  color: ${({theme}) => theme.COLORS.LIGHT_100};
+  border: 0;
+  &:disabled{
+    opacity: 0.5;
   }
 `;

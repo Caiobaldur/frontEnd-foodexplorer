@@ -3,7 +3,7 @@ import {Container} from './styles';
 
 export function IngredientTag({isNew, value, onClick, ...rest}){
   return(
-    <Container>
+    <Container $isNew={isNew}>
       <input
         type="text"
         value={value}
@@ -14,7 +14,7 @@ export function IngredientTag({isNew, value, onClick, ...rest}){
       type="button"
       onClick={onclick}
       >
-        {isNew ? <FiPlus/> : <FiX/>}
+        {isNew ? <FiPlus size={14}/> : <FiX size={14}/>}
       </button>
     </Container>
   )

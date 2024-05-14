@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100vh;
-  .section_one {
-    padding: 4rem 12.3rem 3.2rem 12.3rem;
+  section {
+    padding: 4rem 12.3rem 11.6rem 12.3rem;
     > h1 {
       color: ${({ theme }) => theme.COLORS.LIGHT_300};
       padding: 2.4rem 0rem 3.2rem 0rem;
@@ -11,11 +11,22 @@ export const Container = styled.div`
       font-weight: 400;
     }
     > form {
+      width: 100%;
       display: flex;
+      flex-direction: column;
       gap: 3.2rem;
     }
   }
-  .form_upload {
+
+  .line_one,
+  .line_two {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 3.2rem;
+  }
+
+  .upload {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -25,12 +36,16 @@ export const Container = styled.div`
       font-size: 1.6rem;
       margin-bottom: 1.6rem;
     }
+    input[type="file"] {
+      display: none;
+    }
     label {
       display: flex;
       align-items: center;
       justify-content: center;
       height: 4.8rem;
       width: 100%;
+      cursor: pointer;
       background-color: ${({ theme }) => theme.COLORS.DARK_800};
       font-family: ${({ theme }) => theme.FONTS.Primary};
       font-size: 1.4rem;
@@ -40,15 +55,12 @@ export const Container = styled.div`
         margin-right: 1rem;
       }
     }
-    input[type="file"] {
-      display: none;
-    }
   }
 
-  .form_name,
-  .form_category,
-  .form_tags,
-  .form_price {
+  .name,
+  .category,
+  .tags,
+  .price {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -68,39 +80,44 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
     }
   }
-  .form_upload {
+  .upload {
     width: 60%;
   }
 
-  .form_name {
+  .name {
     width: 150%;
   }
-  .form_category {
+  .category {
     > select {
       background-color: ${({ theme }) => theme.COLORS.DARK_900};
       border-radius: 0.8rem;
     }
   }
 
-  .form_tags {
+  .tags_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.6rem;
+    align-items: center;
+    padding: 0.6rem 0.8rem;
+    flex-wrap: wrap;
+    background: ${({ theme }) => theme.COLORS.DARK_800};
+    border-radius: 0.8rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-direction: column;
     width: 360%;
   }
 
-  .section_two {
-    padding: 0rem 12.3rem 3.2rem 12.3rem;
-    > form {
-      display: flex;
-      gap: 3.2rem;
-    }
-  }
-
-  .section_three {
-    padding: 0rem 12.3rem 19.6rem 12.3rem;
+  .line_three {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .form_description {
+  .description {
     display: flex;
     flex-direction: column;
     margin-bottom: 3.2rem;
@@ -127,7 +144,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 500px) {
-    .section_one {
+    section {
       padding: 1.1rem 3.2rem 2.4rem 3.2rem;
       > h1 {
         content: "Novo prato";
@@ -136,12 +153,13 @@ export const Container = styled.div`
         font-weight: 400;
       }
       > form {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
       }
     }
-    .form_upload {
+    .upload {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -155,42 +173,36 @@ export const Container = styled.div`
       }
     }
 
-    .form_name {
+    .name {
       width: 100%;
     }
 
-    .form_category {
+    .category {
+      width: 100%;
+    }
+    .line_one,
+    .line_two,
+    .line_three {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+
+    .tags_wrap {
+      width: 100%;
+    }
+    .tags {
       width: 100%;
     }
 
-    .section_two {
-      padding: 1rem 3.2rem 2.4rem 3.2rem;
-      > form {
-        display: flex;
-        flex-direction: column;
-        gap: 2.4rem;
-      }
+    .price {
+      width: 100%;
     }
 
-    .form_tags {
+    .description {
       width: auto;
     }
-
-    .form_price {
-      width: auto;
-    }
-    .section_three {
-      padding: 0rem 3.2rem 5.3rem 3.2rem;
-      > form {
-        display: flex;
-        flex-direction: column;
-        gap: 3.2rem;
-      }
-    }
-    .form_description {
-      width: auto;
-    }
-    .button-container{
+    .button-container {
       width: 100%;
       align-self: center;
     }

@@ -17,8 +17,15 @@ export const Container = styled.header`
     align-items: start;
     gap: 1rem;
     margin-right: 1.1rem;
-    transform: translateY(0%);
-    h1 {
+    > img {
+      width: 3rem;
+      height: 3rem;
+    }
+    button {
+      font-family: ${({ theme }) => theme.FONTS.Secondary};
+      color: ${({ theme }) => theme.COLORS.LIGHT_100};
+      font-size: 2.4rem;
+      font-weight: 600;
       display: flex;
       flex-direction: column;
       align-items: end;
@@ -86,15 +93,21 @@ export const Container = styled.header`
       gap: 0.8rem;
 
       transform: translateY(-10%);
-      h1 {
+      > img {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+      > button {
         display: flex;
         flex-direction: row;
         align-items: center;
+        white-space: nowrap;
         gap: 0.8rem;
+        > span {
+          margin-top: .8rem;
+        }
       }
-      span {
-        transform: translateY(0px);
-      }
+
     }
 
     .search {

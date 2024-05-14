@@ -18,8 +18,12 @@ export function Header() {
     return user && user.isAdmin === USER_ROLE.ADMIN;
   };
 
+  const handleGoHome = () => {
+    navigate("/"); 
+  };
+
   const handleNewDishClick = () => {
-    navigate("/dish");
+    navigate("/dishes/");
   };
 
   return (
@@ -29,7 +33,7 @@ export function Header() {
 
         <div className="logo">
           <img src="../src/assets/Polygon.svg" alt="" />
-          <h1>food explorer {isAdmin() && <span>admin</span>}</h1>
+          <button onClick={handleGoHome}>food explorer {isAdmin() && <span>admin</span>}</button>
         </div>
 
         <div className="search">

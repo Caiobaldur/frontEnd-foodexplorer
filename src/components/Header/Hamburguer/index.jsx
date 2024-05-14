@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Footer } from "../../Footer/Footer";
 import { Container, MenuMobile } from "./styles";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
@@ -6,6 +6,7 @@ import { useAuth } from "../../../hooks/auth";
 
 export function Hamburguer({ setMenuOpen, isOpen = false }) {
   const { signOut, user } = useAuth();
+  const navigate = useNavigate();
 
   function handleMenuOpen(isMenuOpen) {
     if (isMenuOpen) {
@@ -25,6 +26,10 @@ export function Hamburguer({ setMenuOpen, isOpen = false }) {
       body.style.overflow = "hidden";
     }
   }
+
+  const handleNewDishClick = () => {
+    navigate("/dishes/");
+  };
 
   return (
     <Container>
@@ -49,7 +54,7 @@ export function Hamburguer({ setMenuOpen, isOpen = false }) {
             </label>
             <div className="menu__options">
               {user.isAdmin ? (
-                <button>
+                <button onClick={handleNewDishClick}>
                   Novo prato <div className="line"></div>
                 </button>
               ) : (

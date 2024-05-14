@@ -12,7 +12,7 @@ export function IngredientTag({isNew, value, onClick, ...rest}){
       />
       <button
       type="button"
-      onClick={onclick}
+      onClick={onClick}
       >
         {isNew ? <FiPlus size={14}/> : <FiX size={14}/>}
       </button>

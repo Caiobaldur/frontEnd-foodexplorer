@@ -12,9 +12,11 @@ export function ShowDish() {
   return (
     <Container>
       <Header />
+      <div className="back_button">
+      <BackButton />
+      </div>
       <Section>
         <div className="left__content">
-          <BackButton />
           <img src={dish1} alt="" />
         </div>
         <div className="dish__description">

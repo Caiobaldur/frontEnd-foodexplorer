@@ -1,27 +1,34 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  .back_button {
+    padding: 3.2rem 0rem 0rem 12.3rem;
+  }
+`;
 
 export const Section = styled.section`
   padding: 2.4rem 12.3rem 15rem;
   display: flex;
-
+  min-height: calc(100vh - 25rem);
+  align-items: center;
+  justify-content: center;
+  gap: 4.7rem;
   .left__content {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    gap: 4.2rem;
+    justify-content: center;
+    flex: 1/2;
 
     > img {
-      width: 39rem;
-      height: 39rem;
+      width: clamp(26.4rem, 50vw, 39rem);
+      height: clamp(26.4rem, 50vw, 39rem);
     }
   }
   .dish__description {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 2;
+    flex: 3/4;
     gap: 2.4rem;
     h1 {
       font-size: 4rem;
@@ -71,8 +78,8 @@ export const Section = styled.section`
       gap: 2.6rem;
 
       > img {
-        width: 26.4rem;
-        height: 26.4rem;
+        width: clamp(26.4rem, 50vw, 39rem);
+        height: clamp(26.4rem, 50vw, 39rem);
       }
     }
 
